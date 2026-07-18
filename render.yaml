@@ -1,0 +1,23 @@
+# Render Blueprint for the Guardline backend, deployed as Docker so the
+# @moss-dev/moss-core native binding (needs GLIBC_2.38) loads on a base image
+# with a new-enough glibc. See Dockerfile for the full rationale.
+services:
+  - type: web
+    name: guardline
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /diag
+    autoDeploy: true
+    envVars:
+      # Set the real values in the Render dashboard (marked sync:false so they
+      # are not stored in the repo).
+      - key: MOSS_PROJECT_ID
+        sync: false
+      - key: MOSS_PROJECT_KEY
+        sync: false
+      - key: BRIGHTDATA_API_TOKEN
+        sync: false
+      - key: BRIGHTDATA_ZONE
+        sync: false

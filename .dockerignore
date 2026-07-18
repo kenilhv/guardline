@@ -1,0 +1,19 @@
+# Never copy the host's node_modules into the image: on Windows it contains the
+# win32 Moss binding and would clobber the Linux one installed inside the build.
+**/node_modules
+
+# Secrets stay out of the image; Render injects env vars at runtime.
+**/.env
+**/.env.*
+
+# Lockfile intentionally uncommitted (host-specific); let npm resolve in-image.
+**/package-lock.json
+
+# Dev/editor/tooling noise
+.git
+.claude
+.mcp.json
+*.log
+.DS_Store
+Thumbs.db
+GUARDLINE_PLAN.md
