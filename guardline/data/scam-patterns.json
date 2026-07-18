@@ -1,0 +1,362 @@
+[
+  {
+    "id": "irs-arrest-threat",
+    "category": "irs",
+    "subtype": "Arrest / warrant threat",
+    "pattern_text": "Caller claims to be from the IRS and says agents have been trying to reach you about unpaid back taxes, that a warrant is out for your arrest, or that the sheriff or police will arrive unless you pay immediately.",
+    "example_phrases": [
+      "there is a warrant out for your arrest over unpaid back taxes",
+      "officers will come to arrest you today unless you settle the balance now"
+    ],
+    "trigger_terms": ["warrant", "arrest", "back taxes", "sheriff", "police", "unpaid taxes"],
+    "real_fact": "The IRS initiates contact by mail through the U.S. Postal Service, not by phone. It will not threaten immediate arrest, and you have the right to question or appeal anything it says you owe.",
+    "actions": [
+      "Hang up — do not confirm any personal details",
+      "The real IRS will not arrest you over a phone call",
+      "If unsure, call the IRS yourself at 800-829-1040 (look it up, don't use a number they gave you)"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/irs/",
+    "source": "aarp"
+  },
+  {
+    "id": "irs-fake-refund",
+    "category": "irs",
+    "subtype": "Fake unclaimed refund",
+    "pattern_text": "An official-looking call, letter, or message says you have an unclaimed tax refund, and to collect it you must send photos of your driver's license and bank account information.",
+    "example_phrases": [
+      "you have an unclaimed tax refund, just send a photo of your license and bank details",
+      "to release your refund we need to verify your bank account information"
+    ],
+    "trigger_terms": ["unclaimed refund", "tax refund", "driver's license", "bank information", "bank account"],
+    "real_fact": "The IRS does not ask you to send photos of your ID or bank details to release a refund. Requests to 'verify' your identity this way are a scam to steal your information.",
+    "actions": [
+      "Do not send photos of your ID or bank details",
+      "Check any refund yourself at irs.gov using your own account",
+      "Delete the message — do not click links or reply"
+    ],
+    "severity": 2,
+    "source_url": "https://www.aarp.org/money/scams-fraud/irs/",
+    "source": "aarp"
+  },
+  {
+    "id": "irs-gift-card-payment",
+    "category": "irs",
+    "subtype": "Gift-card / crypto payment demand",
+    "pattern_text": "Caller posing as the IRS demands immediate payment of a tax debt using a gift card, prepaid debit card, wire transfer, or cryptocurrency, often adding pressure that this must be done right now.",
+    "example_phrases": [
+      "pay your tax debt immediately with a gift card or you will be arrested",
+      "go buy prepaid cards and read me the numbers to clear your IRS balance"
+    ],
+    "trigger_terms": ["gift card", "prepaid", "wire transfer", "cryptocurrency", "pay immediately"],
+    "real_fact": "The IRS never asks for payment by gift card, prepaid debit card, wire transfer, or cryptocurrency. Any demand to pay taxes that way is always a scam. Real tax debts can be paid on installment plans.",
+    "actions": [
+      "Stop — no government agency is paid in gift cards",
+      "Do not buy any cards or read card numbers to anyone",
+      "Hang up and report it at tigta.gov"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/irs/",
+    "source": "aarp"
+  },
+  {
+    "id": "irs-robocall-callback",
+    "category": "irs",
+    "subtype": "Robocall press-1 callback",
+    "pattern_text": "An automated robocall claims to be the IRS about a legal case or problem with your taxes and instructs you to press a number or call back to speak with an agent before you are arrested or sued.",
+    "example_phrases": [
+      "this is the IRS, press one now to speak to an agent about a legal case against you",
+      "call this number back immediately regarding a lawsuit on your taxes"
+    ],
+    "trigger_terms": ["press one", "call back", "legal case", "lawsuit", "final notice"],
+    "real_fact": "The IRS does not leave prerecorded robocalls threatening lawsuits or arrest, and does not tell you to press a number to avoid legal action. These automated calls are scams.",
+    "actions": [
+      "Do not press any number or call the number back",
+      "Just hang up — engaging confirms your line is active",
+      "Report the caller ID to phishing@irs.gov"
+    ],
+    "severity": 2,
+    "source_url": "https://www.aarp.org/money/scams-fraud/irs/",
+    "source": "aarp"
+  },
+  {
+    "id": "tech-fake-popup",
+    "category": "tech_support",
+    "subtype": "Fake virus pop-up",
+    "pattern_text": "A pop-up or loud voice on your computer warns that your device is infected with a virus, tells you not to turn it off, and displays a phone number to call for tech support right away.",
+    "example_phrases": [
+      "your computer is infected, do not turn it off, call this number now",
+      "a virus has been detected on your device, call support immediately"
+    ],
+    "trigger_terms": ["infected", "virus", "do not turn off", "call this number", "detected"],
+    "real_fact": "Real security warnings from Microsoft or Apple never include a phone number to call. A pop-up telling you to call a number is always a scam, often triggered by a malicious ad.",
+    "actions": [
+      "Do not call the number on the pop-up",
+      "Close the browser or restart the computer — the warning is fake",
+      "Never let a caller take remote control of your computer"
+    ],
+    "severity": 2,
+    "source_url": "https://www.aarp.org/money/scams-fraud/fake-online-tech-support/",
+    "source": "aarp"
+  },
+  {
+    "id": "tech-microsoft-impersonation",
+    "category": "tech_support",
+    "subtype": "Microsoft/Apple impersonation call",
+    "pattern_text": "Someone calls claiming to be from Microsoft, Apple, or a tech company's support team, says there are hackers or a serious problem on your computer, and offers to fix it.",
+    "example_phrases": [
+      "this is Microsoft support, there are hackers in your computer right now",
+      "we detected suspicious activity on your Windows license and need to fix it"
+    ],
+    "trigger_terms": ["Microsoft", "Apple", "tech support", "hackers", "suspicious activity"],
+    "real_fact": "Microsoft, Apple, and other tech companies do not make unsolicited calls about problems on your computer. If they didn't schedule it with you, it's a scam.",
+    "actions": [
+      "Hang up — legitimate companies don't cold-call about your PC",
+      "Do not confirm any account, license, or payment details",
+      "If worried, contact the company through its official website only"
+    ],
+    "severity": 2,
+    "source_url": "https://www.aarp.org/money/scams-fraud/fake-online-tech-support/",
+    "source": "aarp"
+  },
+  {
+    "id": "tech-remote-access",
+    "category": "tech_support",
+    "subtype": "Remote-access request",
+    "pattern_text": "A supposed technician asks you to download software or grant remote access so they can 'fix' your computer, remove hackers, or protect your accounts.",
+    "example_phrases": [
+      "download this program so I can remove the hackers from your computer",
+      "let me connect to your computer remotely to secure your accounts"
+    ],
+    "trigger_terms": ["remote access", "download", "connect to your computer", "install", "give me access"],
+    "real_fact": "Granting remote access lets a scammer see your files, passwords, and bank logins. No legitimate unsolicited caller needs to control your computer.",
+    "actions": [
+      "Never install software or grant access to someone who contacted you",
+      "If you already did, disconnect from the internet and change key passwords",
+      "Call your bank if any financial account was open during the call"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/fake-online-tech-support/",
+    "source": "aarp"
+  },
+  {
+    "id": "tech-bank-transfer-followup",
+    "category": "tech_support",
+    "subtype": "Fake bank-security follow-up",
+    "pattern_text": "After gaining access, the scammer transfers you to someone posing as a bank or security official who says hackers are stealing from your account and you must move your money to a 'safe' account to protect it.",
+    "example_phrases": [
+      "hackers are draining your account, move your money to a safe account now",
+      "our security team will protect your funds if you transfer them immediately"
+    ],
+    "trigger_terms": ["safe account", "move your money", "transfer", "protect your funds", "security department"],
+    "real_fact": "No bank or agency will ever tell you to move your money to a 'safe account' to protect it. That instruction is always a scam designed to steal your savings.",
+    "actions": [
+      "Do not move or transfer any money",
+      "Hang up and call your bank using the number on your card",
+      "A real bank never asks you to wire your balance elsewhere"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/fake-online-tech-support/",
+    "source": "aarp"
+  },
+  {
+    "id": "grandparent-accident-emergency",
+    "category": "grandparent",
+    "subtype": "Grandchild in an accident",
+    "pattern_text": "A caller who sounds like a grandchild or relative, often crying or upset, says they were in a car accident, are hurt, or are in urgent trouble and need help right away.",
+    "example_phrases": [
+      "grandma it's me, I was in a car accident and I'm hurt and in trouble",
+      "please help me, something happened and I didn't know who else to call"
+    ],
+    "trigger_terms": ["it's me", "accident", "in trouble", "hurt", "grandma", "grandpa"],
+    "real_fact": "Scammers pose as a panicked relative to rush you. AI voice cloning can copy a loved one's voice from just a few seconds of audio, so a familiar voice does not prove it's really them.",
+    "actions": [
+      "Hang up and call the relative directly on their known number",
+      "Ask a question only the real person could answer",
+      "A real emergency will still be true after you verify"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/grandparent/",
+    "source": "aarp"
+  },
+  {
+    "id": "grandparent-bail-lawyer",
+    "category": "grandparent",
+    "subtype": "Arrested / needs bail",
+    "pattern_text": "The caller, or a second caller posing as a lawyer, police officer, or court official, says your grandchild has been arrested and you must send bail money within a couple of hours.",
+    "example_phrases": [
+      "I'm your grandson's lawyer, he's been arrested and needs bail within two hours",
+      "this is the court, you must post bail immediately or he stays in jail"
+    ],
+    "trigger_terms": ["bail", "arrested", "lawyer", "jail", "court", "two hours"],
+    "real_fact": "Real courts and lawyers do not call grandparents demanding secret, rushed bail payments by wire or gift card. The tight deadline exists only to stop you from checking.",
+    "actions": [
+      "Do not send bail money — hang up first",
+      "Call the relative and another family member to confirm",
+      "Real legal processes are never resolved by a rushed phone payment"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/grandparent/",
+    "source": "aarp"
+  },
+  {
+    "id": "grandparent-secrecy-payment",
+    "category": "grandparent",
+    "subtype": "Secrecy + wire/gift-card payment",
+    "pattern_text": "The caller begs you not to tell other family members and directs you to send money quickly by wire transfer, a cash kiosk, or gift cards.",
+    "example_phrases": [
+      "please don't tell mom and dad, just wire the money to this account now",
+      "go to the store, buy gift cards, and read me the numbers, but keep it secret"
+    ],
+    "trigger_terms": ["don't tell", "keep it secret", "wire the money", "gift cards", "kiosk"],
+    "real_fact": "The demand for secrecy is the tell. A genuine family emergency is something you can and should discuss with other relatives before sending any money.",
+    "actions": [
+      "Break the secrecy — call another family member right away",
+      "Do not wire money or buy gift cards for anyone on a call",
+      "Slow down; pressure and secrecy are how the scam works"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/grandparent/",
+    "source": "aarp"
+  },
+  {
+    "id": "medicare-new-card",
+    "category": "medicare",
+    "subtype": "New card offer",
+    "pattern_text": "Caller claims to be from Medicare and says you are getting a new card — plastic, or with a chip, or with extra benefits — and needs to confirm your Medicare ID or personal information to send it.",
+    "example_phrases": [
+      "we're sending your new Medicare chip card, please confirm your Medicare ID",
+      "your new plastic Medicare card is ready once you verify your details"
+    ],
+    "trigger_terms": ["new medicare card", "chip card", "plastic card", "medicare ID", "confirm"],
+    "real_fact": "Medicare cards are paper and none have a chip. Any call about a 'new chip card' or 'plastic card' is a scam. Medicare will not call you out of the blue to confirm your number.",
+    "actions": [
+      "Hang up — there is no Medicare chip card",
+      "Never give your Medicare number to an unexpected caller",
+      "Verify anything by calling 1-800-MEDICARE yourself"
+    ],
+    "severity": 2,
+    "source_url": "https://www.aarp.org/money/scams-fraud/new-medicare-card/",
+    "source": "aarp"
+  },
+  {
+    "id": "medicare-verify-ssn",
+    "category": "medicare",
+    "subtype": "Verify Medicare ID / SSN",
+    "pattern_text": "Caller says they need to confirm your Medicare number, Social Security number, or banking details to keep your coverage active or process paperwork.",
+    "example_phrases": [
+      "we just need your social security number to keep your Medicare active",
+      "confirm your Medicare and bank details so we can continue your premiums"
+    ],
+    "trigger_terms": ["social security number", "medicare number", "banking", "confirm", "verify"],
+    "real_fact": "Knowing your birthday or address does not prove a caller is real — scammers buy that data. Medicare will not cold-call to collect your number, SSN, or bank details.",
+    "actions": [
+      "Do not share your Medicare number, SSN, or bank info",
+      "Hang up even if the caller already knows some details about you",
+      "Report suspected Medicare fraud at 1-800-MEDICARE"
+    ],
+    "severity": 3,
+    "source_url": "https://www.aarp.org/money/scams-fraud/new-medicare-card/",
+    "source": "aarp"
+  },
+  {
+    "id": "medicare-benefits-suspended",
+    "category": "medicare",
+    "subtype": "Benefits suspended threat",
+    "pattern_text": "Caller warns that your Medicare benefits will be suspended or cancelled unless you verify information or act immediately.",
+    "example_phrases": [
+      "your Medicare benefits will be suspended today unless you verify your information",
+      "your coverage is being cancelled, act now to keep it active"
+    ],
+    "trigger_terms": ["suspended", "cancelled", "benefits", "verify", "act now"],
+    "real_fact": "Medicare does not threaten to suddenly suspend your benefits over the phone to pressure you into sharing information. This urgency is a scam tactic.",
+    "actions": [
+      "Ignore the pressure — hang up",
+      "Your benefits are not cancelled by a phone call",
+      "Confirm your status only through 1-800-MEDICARE"
+    ],
+    "severity": 2,
+    "source_url": "https://www.aarp.org/money/scams-fraud/new-medicare-card/",
+    "source": "aarp"
+  },
+  {
+    "id": "medicare-free-equipment",
+    "category": "medicare",
+    "subtype": "Free braces / equipment",
+    "pattern_text": "Caller offers free medical equipment such as a back or knee brace, genetic testing, or diabetic supplies billed to Medicare, and asks for your Medicare number to send it.",
+    "example_phrases": [
+      "you qualify for a free back brace through Medicare, just give me your number",
+      "Medicare covers a free genetic test, confirm your ID to ship it"
+    ],
+    "trigger_terms": ["free brace", "free", "genetic testing", "diabetic supplies", "medicare number"],
+    "real_fact": "Scammers use 'free' equipment offers to steal your Medicare number and bill for items you never get — which can use up a one-time benefit you'll need later.",
+    "actions": [
+      "Do not give your Medicare number for 'free' offers",
+      "Hang up on unsolicited medical-equipment calls",
+      "Report it to 1-800-MEDICARE or your Senior Medicare Patrol"
+    ],
+    "severity": 2,
+    "source_url": "https://www.aarp.org/money/scams-fraud/new-medicare-card/",
+    "source": "aarp"
+  },
+  {
+    "id": "utility-shutoff-threat",
+    "category": "utility_shutoff",
+    "subtype": "Shut-off in an hour",
+    "pattern_text": "Caller claims to be from the electric, gas, or water company, says your bill is overdue, and threatens to shut off service within the hour unless you pay right now.",
+    "example_phrases": [
+      "your electricity will be shut off within the hour unless you pay now",
+      "this is the gas company, your service is being disconnected today for non-payment"
+    ],
+    "trigger_terms": ["shut off", "disconnected", "overdue", "within the hour", "service"],
+    "real_fact": "Utility companies do not call demanding instant payment under a one-hour deadline. The rushed threat is designed to panic you before you can check with the real company.",
+    "actions": [
+      "Hang up and call the number on your real utility bill",
+      "A real utility gives written notice, not a one-hour phone threat",
+      "Never pay a 'shut-off' demand on the spot"
+    ],
+    "severity": 2,
+    "source_url": "https://www.bbb.org/article/scams/16907-bbb-tip-utility-impostor-scam",
+    "source": "bbb"
+  },
+  {
+    "id": "utility-prepaid-card",
+    "category": "utility_shutoff",
+    "subtype": "Prepaid-card / gift-card demand",
+    "pattern_text": "The supposed utility representative insists you pay the overdue amount with a prepaid debit card, gift card, or wire transfer to avoid disconnection.",
+    "example_phrases": [
+      "buy a prepaid card and call back with the numbers to keep your power on",
+      "pay by gift card now or we cut the electricity this afternoon"
+    ],
+    "trigger_terms": ["prepaid card", "gift card", "wire transfer", "numbers", "pay now"],
+    "real_fact": "Legitimate utilities accept checks and credit cards and never require prepaid cards, gift cards, or wire transfers. That payment demand is a certain sign of a scam.",
+    "actions": [
+      "Do not buy prepaid or gift cards for a utility bill",
+      "Hang up and verify with the number on your paper bill",
+      "Report the scam to your utility and to BBB Scam Tracker"
+    ],
+    "severity": 3,
+    "source_url": "https://www.bbb.org/article/scams/16907-bbb-tip-utility-impostor-scam",
+    "source": "bbb"
+  },
+  {
+    "id": "utility-meter-entry",
+    "category": "utility_shutoff",
+    "subtype": "Door-to-door meter / audit entry",
+    "pattern_text": "Someone shows up in a plausible uniform claiming your meter is broken and must be replaced at your expense, or offers a home energy audit to gain entry to your home.",
+    "example_phrases": [
+      "your electric meter is faulty and must be replaced today at your cost",
+      "we're doing a free energy audit, we just need to come inside to check"
+    ],
+    "trigger_terms": ["meter", "replace", "energy audit", "come inside", "at your expense"],
+    "real_fact": "Scammers use fake meter or audit visits to charge for bogus work or get inside to steal. Real utilities rarely show up unannounced demanding entry or payment.",
+    "actions": [
+      "Do not let an unscheduled 'utility worker' inside",
+      "Ask for ID and call the utility to confirm before anything",
+      "Never pay a worker at the door for a meter or repair"
+    ],
+    "severity": 2,
+    "source_url": "https://www.bbb.org/article/scams/16907-bbb-tip-utility-impostor-scam",
+    "source": "bbb"
+  }
+]

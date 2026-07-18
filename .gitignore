@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# secrets & env
+.env
+.env.*
+!.env.example
+
+# local tooling / editor state
+.claude/
+.mcp.json
+GUARDLINE_PLAN.md
+
+# logs & os
+*.log
+.DS_Store
+Thumbs.db

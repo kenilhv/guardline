@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guardline — real-time scam-call protection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-state="idle">
+    <div class="grain" aria-hidden="true"></div>
+    <div class="stage">
+      <header class="topbar">
+        <div class="wordmark">
+          <svg class="wordmark__glyph" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M12 2.5 4.5 5.5v6c0 4.6 3.2 8.4 7.5 10 4.3-1.6 7.5-5.4 7.5-10v-6L12 2.5Z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M8.6 12.2l2.3 2.3 4.5-4.7"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span class="wordmark__name">Guardline</span>
+        </div>
+        <div class="powered" aria-label="Powered by Moss and Bright Data">
+          <span class="powered__label">retrieval</span>
+          <span class="powered__chip">Moss</span>
+          <span class="powered__dot">·</span>
+          <span class="powered__chip">Bright Data</span>
+        </div>
+      </header>
+
+      <!-- Coverage / threat-library panel -->
+      <section class="library" aria-label="Threat library coverage">
+        <div class="library__stat">
+          <span class="library__num" id="lib-count">—</span>
+          <span class="library__unit">scam patterns</span>
+        </div>
+        <div class="library__meta">
+          <span id="lib-categories">— categories</span>
+          <span class="library__sep">·</span>
+          <span id="lib-sources">sources —</span>
+        </div>
+        <button id="update-lib" class="library__update" type="button">
+          <span class="library__update-dot"></span>
+          Update library
+        </button>
+      </section>
+
+      <main class="center">
+        <div class="orb-wrap">
+          <canvas id="orb" class="orb" aria-hidden="true"></canvas>
+          <button
+            id="mic-btn"
+            type="button"
+            class="orb-hit"
+            aria-pressed="false"
+            aria-label="Start listening"
+          ></button>
+        </div>
+
+        <div class="status-stack" aria-live="polite">
+          <p id="status" class="status">Tap the orb to protect this call</p>
+          <p id="hint" class="hint">
+            Put the phone on speaker nearby. Guardline listens silently.
+          </p>
+          <button id="replay-btn" class="replay" type="button">▸ Replay a sample scam call</button>
+        </div>
+
+        <!-- Threat meter -->
+        <div class="threat" id="threat" hidden>
+          <div class="threat__head">
+            <span class="threat__label">Call threat level</span>
+            <span class="threat__value" id="threat-value">Low</span>
+          </div>
+          <div class="threat__track">
+            <div class="threat__fill" id="threat-fill"></div>
+          </div>
+        </div>
+
+        <div class="transcript" id="transcript-wrap" hidden>
+          <span class="transcript__label">Hearing</span>
+          <p id="transcript" class="transcript__text">—</p>
+        </div>
+      </main>
+
+      <section
+        class="alerts"
+        id="alerts"
+        aria-live="assertive"
+        aria-label="Scam alerts"
+      ></section>
+
+      <p id="unsupported" class="unsupported" role="alert" hidden></p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
