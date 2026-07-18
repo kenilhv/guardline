@@ -249,12 +249,13 @@ app.get("/diag", async (_req, res) => {
     entries = [`error reading ${scopeDir}: ${err.message}`];
   }
 
-  // Bypass moss-core's own try/catch-everything wrapper and require the
-  // platform binding directly, to see the REAL underlying dlopen error
+  // Bypass moss-core's own try/catch-everything wrapper AND the package
+  // "exports" restriction by dlopen-ing the .node file via its ABSOLUTE path.
+  // This surfaces the REAL underlying error (e.g. a GLIBC version mismatch)
   // instead of moss-core's generic "Cannot find native binding" message.
   const bindingCandidates = [
-    "@moss-dev/moss-core/js-binding.linux-x64-gnu.node",
-    "@moss-dev/moss-core/js-binding.linux-x64-musl.node",
+    join(scopeDir, "moss-core", "js-binding.linux-x64-gnu.node"),
+    join(scopeDir, "moss-core-linux-x64-gnu", "js-binding.linux-x64-gnu.node"),
   ];
   const directRequireResults = {};
   for (const candidate of bindingCandidates) {
