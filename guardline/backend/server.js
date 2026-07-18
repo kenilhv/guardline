@@ -221,6 +221,60 @@ app.get("/health", (_req, res) => {
   res.json({ ok: true, patterns: patterns.length, mossReady });
 });
 
+// TEMP diagnostic — remove once the Moss native-binding deploy issue is resolved.
+app.get("/diag", async (_req, res) => {
+  const { readdirSync, statSync } = await import("fs");
+  const { createRequire } = await import("module");
+  const require = createRequire(import.meta.url);
+
+  const scopeDir = join(__dirname, "node_modules", "@moss-dev");
+  let entries = [];
+  try {
+    entries = readdirSync(scopeDir).map((name) => {
+      const dir = join(scopeDir, name);
+      let files = [];
+      try {
+        files = readdirSync(dir).map((f) => {
+          try {
+            const st = statSync(join(dir, f));
+            return `${f} (${st.size} bytes)`;
+          } catch {
+            return f;
+          }
+        });
+      } catch {}
+      return { name, files };
+    });
+  } catch (err) {
+    entries = [`error reading ${scopeDir}: ${err.message}`];
+  }
+
+  // Bypass moss-core's own try/catch-everything wrapper and require the
+  // platform binding directly, to see the REAL underlying dlopen error
+  // instead of moss-core's generic "Cannot find native binding" message.
+  const bindingCandidates = [
+    "@moss-dev/moss-core/js-binding.linux-x64-gnu.node",
+    "@moss-dev/moss-core/js-binding.linux-x64-musl.node",
+  ];
+  const directRequireResults = {};
+  for (const candidate of bindingCandidates) {
+    try {
+      require(candidate);
+      directRequireResults[candidate] = "OK";
+    } catch (err) {
+      directRequireResults[candidate] = err.message;
+    }
+  }
+
+  res.json({
+    platform: process.platform,
+    arch: process.arch,
+    nodeVersion: process.version,
+    moss_dev_scope: entries,
+    directRequireResults,
+  });
+});
+
 app.listen(PORT, async () => {
   console.log(`Guardline backend listening on http://localhost:${PORT}`);
   console.log(`Loaded ${patterns.length} scam patterns across ${new Set(patterns.map((p) => p.category)).size} categories`);
