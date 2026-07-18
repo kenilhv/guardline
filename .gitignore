@@ -1,5 +1,10 @@
 # dependencies
 node_modules/
+# Not committing this: it was generated on Windows and pins the wrong
+# platform's @moss-dev/moss-core optional dependency, which breaks Moss's
+# native binding on Linux hosts (npm/cli#4828). Let each environment resolve
+# its own lockfile via `npm install`.
+package-lock.json
 
 # secrets & env
 .env
